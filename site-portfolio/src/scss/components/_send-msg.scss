@@ -1,0 +1,74 @@
+@import 'common-modal';
+
+.modal-sendmsg {
+  position: fixed;
+  visibility: hidden;
+  pointer-events: none;
+
+  &__wrapper {
+    max-width: 680px;
+    width: 100%;
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__inp-wrapper {
+    display: flex;
+    width: 100%;
+    gap: 0 20px;
+  }
+
+  &__label {
+    width: 100%;
+  }
+  &__textarea {
+    font-size: rem(18);
+    line-height: 1.2;
+    color: #070707;
+    border: 2.5px solid #e5e5e5;
+    width: 100%;
+    margin: 6px 0 20px 0;
+    resize: none;
+    height: 150px;
+    padding: 14px;
+  }
+
+  &__label-agree {
+    margin-left: 30px;
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -30px;
+      transform: translateY(-50%);
+      width: 19px;
+      height: 19px;
+      border: 2px solid #070707;
+      border-radius: 3px;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      width: 19px;
+      height: 19px;
+      left: -30px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url(../img/check.svg) top right no-repeat;
+      opacity: 0;
+    }
+  }
+
+  &__btn {
+    margin-top: 20px;
+  }
+}
+
+.modal-sendmsg__checkbox:checked + .modal-sendmsg__label-agree:after {
+  opacity: 1;
+}

@@ -1,0 +1,22 @@
+// базовые подключения
+@import "vars";
+@import "clear";
+@import "mixins";
+@import "fonts";
+@import "common";
+
+// подключение стилей slider swiper
+@import "./components/swiper";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/section-user";
+@import "./components/section-about";
+@import "./components/section-skills";
+@import "./components/section-portfolio";
+@import "./components/footer";
+@import "./components/signin";
+@import "./components/register";
+@import "./components/send-msg";
+
+

@@ -1,0 +1,91 @@
+//common styles for modals
+.modal-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 40px 40px;
+  background: rgba(246, 246, 246, 0.99);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: visible!important;
+  pointer-events: visible!important;
+  z-index: 150;
+}
+
+.modal-wrapper {
+  background: #ffffff;
+  border: 2.5px solid #070707;
+  position: relative;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px;
+}
+
+.modal-label {
+  font-size: rem(14);
+  line-height: 1.2;
+  
+}
+.modal-input {
+  font-size: rem(18);
+  line-height: 1.2;
+  padding: 0 14px;
+  width: 100%;
+  height: 50px;
+  border: 2.5px solid #e5e5e5;
+  margin-bottom: 20px;
+  margin-top: 6px;
+  &::placeholder {
+    font-size: rem(18);
+    line-height: 1.2;
+  }
+}
+
+.modal-btn {
+  font-weight: 700;
+  font-size: rem(18);
+  line-height: 1.2;
+  height: 42px;
+  padding: 0 19px;
+  border: 2.5px solid #070707;
+  border-radius: 30px;
+  background: transparent;
+}
+
+.modal-btn-close {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 0;
+  right: -36px;
+  background-color: transparent;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.label-star {
+  color: #eb3617;
+}
+
+.modal-show {
+	z-index: 150;
+	visibility: visible;
+	pointer-events: auto;
+}
+
+input[type='checkbox'] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+

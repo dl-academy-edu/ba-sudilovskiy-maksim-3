@@ -1,0 +1,15 @@
+@import "common-modal";
+
+.modal-signin {
+  position: fixed;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal-signin__wrapper {
+    max-width: 370px;
+    width: 100%;  
+}
+
+.modal-signin__btn {
+  margin-top: 10px;
+}

@@ -1,0 +1,35 @@
+.header {
+  &__container {
+    min-height: 89px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #828282;
+  }
+
+  &__link {
+    font-size: rem(18);
+    line-height: 1.2;
+    font-weight: 700;
+    color: #828282;
+    margin-left: 2px;
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    gap: 0 20px;
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: rem(18);
+    line-height: 1.2;
+    color: #828282;
+  }
+}
+
+.current-page {
+  color: #070707;
+}
