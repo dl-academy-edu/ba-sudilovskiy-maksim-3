@@ -9,6 +9,9 @@
 .modal-reg__wrapper {
   max-width: 680px;
   width: 100%;
+  @media (max-width: 700px) {
+    max-width: 100%;
+  }
 }
 .modal-reg__inp-wrapper {
   width: 100%;
@@ -16,11 +19,17 @@
   &:not(:first-child) {
     display: flex;
     justify-content: space-between;
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
   }
 }
 
 .modal-reg__label {
   width: 48%;
+  @media (max-width: 700px) {
+    width: 100%;
+  }
 }
 
 .modal-reg__label-agree {
@@ -36,7 +45,7 @@
     transform: translateY(-50%);
     width: 19px;
     height: 19px;
-    border: 2px solid #070707;
+    border: 2px solid $main-color;
     border-radius: 3px;
   }
   &:after {

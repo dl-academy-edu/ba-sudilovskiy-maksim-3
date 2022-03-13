@@ -1,13 +1,16 @@
 .about {
   padding: 60px 0 79px 0;
-  background: #F6F6F6;
+  background: $bg-color;
   
   &_title {
     font-size: rem(34);
     line-height: 1.2;
-    color: #070707;
+    color: $main-color;
     text-align: center;
     margin-bottom: 51px;
+    @media (max-width: 700px) {
+      margin-bottom: 32px;
+    }
   }
 
   &__list {
@@ -17,13 +20,16 @@
     display: flex;
     flex-direction: column;
     gap: 37px;
+    @media (max-width: 700px) {
+      gap: 39px;
+    }
   }
 
   &__item {
     position: relative;
     max-width: 479px;
     width: 100%;
-    border: 2.5px solid #070707;
+    border: 2.5px solid $main-color;
     padding: 15px 12px 15px 12px;
 
     &::before {
@@ -47,6 +53,11 @@
   &__txt {
     font-size: rem(18);
     line-height: 1.15;
-    color: #070707;
+    color: $main-color;
+  }
+
+  @media (max-width: 700px) {
+    padding-top: 40px;
+    padding-bottom: 59px;
   }
 }

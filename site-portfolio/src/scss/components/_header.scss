@@ -4,15 +4,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #828282;
+    border-bottom: 1px solid $dark-grey;
   }
 
   &__link {
     font-size: rem(18);
     line-height: 1.2;
     font-weight: 700;
-    color: #828282;
+    color: $dark-grey;
     margin-left: 2px;
+    transition: color 0.3s ease;
+    &:hover {
+      color: $main-color;
+    }
+  }
+  @media (max-width: 700px) {
+    display: none;
   }
 }
 
@@ -26,10 +33,17 @@
     font-weight: 700;
     font-size: rem(18);
     line-height: 1.2;
-    color: #828282;
+    color: $dark-grey;
+    transition: color 0.3s ease;
+    &:hover {
+      color: $main-color;
+    }
   }
 }
 
 .current-page {
-  color: #070707;
+  color: $main-color;
 }
+
+
+

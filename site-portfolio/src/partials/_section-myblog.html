@@ -1,0 +1,132 @@
+<section class="blog">
+  <div class="blog__container container">
+    <h1 class="blog__title">My blog</h1>
+    <div class="blog__filter filter">
+      <form class="filter__form" name="filterForm">
+        <div class="filter__tags">
+          <span class="filter__name">Tags</span>
+          <label class="filter__label-tags filter__label-tags_blue">
+            <input class="filter__inp-tags" type="checkbox" name="blue">
+            <svg  class="filter__check-icon" width="12" height="12.5" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="filter__check-icon_blue" d="M2 6.75L5.91301 12.77C6.20128 13.2135 6.85836 13.1893 7.11327 12.7259L13.425 1.25" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </label>
+          <label class="filter__label-tags filter__label-tags_cyan">
+            <input class="filter__inp-tags filter__inp-tags_cyan" type="checkbox" name="cyan">
+            <svg  class="filter__check-icon" width="12" height="12.5" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="filter__check-icon_cyan" d="M2 6.75L5.91301 12.77C6.20128 13.2135 6.85836 13.1893 7.11327 12.7259L13.425 1.25" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </label>
+          <label class="filter__label-tags filter__label-tags_yellow">
+            <input class="filter__inp-tags filter__inp-tags_yellow" type="checkbox" name="yellow">
+            <svg  class="filter__check-icon" width="12" height="12.5" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="filter__check-icon_yellow" d="M2 6.75L5.91301 12.77C6.20128 13.2135 6.85836 13.1893 7.11327 12.7259L13.425 1.25" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </label>
+          <label class="filter__label-tags filter__label-tags_turquoise">
+            <input class="filter__inp-tags filter__inp-tags_turquoise" type="checkbox" name="turquoise">
+            <svg  class="filter__check-icon" width="12" height="12.5" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="filter__check-icon_turquoise" d="M2 6.75L5.91301 12.77C6.20128 13.2135 6.85836 13.1893 7.11327 12.7259L13.425 1.25" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </label>
+          <label class="filter__label-tags filter__label-tags_orange">
+            <input class="filter__inp-tags filter__inp-tags_orange" type="checkbox" name="orange">
+            <svg  class="filter__check-icon" width="12" height="12.5" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="filter__check-icon_orange" d="M2 6.75L5.91301 12.77C6.20128 13.2135 6.85836 13.1893 7.11327 12.7259L13.425 1.25" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </label>
+          <label class="filter__label-tags filter__label-tags_red">
+            <input class="filter__inp-tags filter__inp-tags_red" type="checkbox" name="red">
+            <svg  class="filter__check-icon" width="12" height="12.5" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="filter__check-icon_red" d="M2 6.75L5.91301 12.77C6.20128 13.2135 6.85836 13.1893 7.11327 12.7259L13.425 1.25" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </label>
+          <label class="filter__label-tags filter__label-tags_purple">
+            <input class="filter__inp-tags filter__inp-tags_purple" type="checkbox" name="purple">
+            <svg  class="filter__check-icon" width="12" height="12.5" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="filter__check-icon_purple" d="M2 6.75L5.91301 12.77C6.20128 13.2135 6.85836 13.1893 7.11327 12.7259L13.425 1.25" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </label>
+          <label class="filter__label-tags filter__label-tags_green">
+            <input class="filter__inp-tags filter__inp-tags_green" type="checkbox" name="green">
+            <svg  class="filter__check-icon" width="12" height="12.5" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="filter__check-icon_green" d="M2 6.75L5.91301 12.77C6.20128 13.2135 6.85836 13.1893 7.11327 12.7259L13.425 1.25" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </label>
+        </div>
+        <div class="filter__views">
+          <span class="filter__name">Views</span>
+          <input class="filter__inp-views" type="radio" name="views" id="views-1" value="100-500" checked>
+          <label class="filter__label-views" for="views-1">100-500</label>
+          <input class="filter__inp-views" type="radio" name="views" id="views-2" value="500-1000">
+          <label class="filter__label-views" for="views-2">500-1000</label>
+          <input class="filter__inp-views" type="radio" name="views" id="views-3" value="1000-2000">
+          <label class="filter__label-views" for="views-3">1000-2000</label>
+        </div>
+        <div class="filter__comments">
+          <span class="filter__name">Comments</span>
+          <input class="filter__inp-comment" type="checkbox" id="comments-1" name="comments" value="0">
+          <label class="filter__label-comment" for="comments-1">0</label>
+          <input class="filter__inp-comment" type="checkbox" id="comments-2" name="comments" value="0-1">
+          <label class="filter__label-comment" for="comments-2">0-1</label>
+          <input class="filter__inp-comment" type="checkbox" id="comments-3" name="comments" value="1-50" checked>
+          <label class="filter__label-comment" for="comments-3">1-50</label>
+        </div>
+        <div class="filter__show">
+          <span class="filter__name">How show?</span>
+          <input class="filter__inp-show" type="radio" name="limit" id="show-1" value="5" checked>
+          <label class="filter__label-show" for="show-1">show 5</label>
+          <input class="filter__inp-show" type="radio" name="limit" id="show-2" value="10">
+          <label class="filter__label-show" for="show-2">show 10</label>
+        </div>
+        <div class="filter__sort">
+          <span class="filter__name">Sort by</span>
+          <input class="filter__inp-sort" type="radio" name="sort" id="sort-1" value="date" checked>
+          <label class="filter__label-sort" for="sort-1">date</label>
+          <input class="filter__inp-sort" type="radio" name="sort" id="sort-2" value="title">
+          <label class="filter__label-sort" for="sort-2">title</label>
+          <input class="filter__inp-sort" type="radio" name="sort" id="sort-3" value="views">
+          <label class="filter__label-sort" for="sort-3">views</label>
+        </div>
+        <button class="filter__btn btn">Apply</button>
+      </form>
+    </div>
+    <div class="blog__search search">
+      <form class="search__form">
+        <input class="search__inp" type="text">
+        <button class="search__btn btn">Search</button>
+      </form>
+    </div>
+    <div class="blog__posts post">
+      <div class="preloader active">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+        <div class="circle circle-4"></div>
+        <div class="circle circle-5"></div>
+      </div>
+    </div>
+    <div class="blog__pagintaion pagination">
+      <button class="pagination__btn pagination__btn_prev" type="button">
+        <svg class="pagination__arrow-svg">
+         <use href="./img/svg/sprite.svg#arrow-slider"></use>
+        </svg>
+      </button>
+      <div class="pagination__pages">
+        <button class="pagination__page pagination__page_current" type="button">1</button>
+        <button class="pagination__page" type="button">2</button>
+        <button class="pagination__page" type="button">3</button>
+        <button class="pagination__page" type="button">4</button>
+        <button class="pagination__page" type="button">5</button>
+        <button class="pagination__page" type="button">6</button>
+        <button class="pagination__page" type="button">7</button>
+        <button class="pagination__page" type="button">8</button>
+      </div>
+      <button class="pagination__btn pagination__btn_next" type="button">
+        <svg class="pagination__arrow-svg">
+         <use href="./img/svg/sprite.svg#arrow-slider"></use>
+        </svg>
+      </button>
+    </div>  
+  </div>
+</section>

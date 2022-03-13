@@ -1,6 +1,6 @@
 .portfolio {
   padding: 61px 0 60px 0;
-  background: #f6f6f6;
+  background: $bg-color;
 
   &__container {
   }
@@ -10,8 +10,15 @@
     font-size: rem(34);
     line-height: 1.2;
     text-align: center;
-    color: #070707;
+    color: $main-color;
     margin-bottom: 51px;
+    @media (max-width: 700px) {
+      margin-bottom: 33px;
+    }
+  }
+  @media (max-width: 700px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 
@@ -34,15 +41,28 @@
   bottom: 0;
   left: 0;
   right: 0;
-  color: #ffffff;
+  color: $white;
   background: rgba(7, 7, 7, 0.85);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   text-align: center;
+  @media (max-width: 700px) {
+    font-weight: 400;
+    padding: 20px 15px; 
+  }
 }
 .swiper-link {
-  color: #ffffff;
-  text-decoration: underline dashed;
+  color: $white;
+  position: relative;
+  border-bottom: 1px dashed $white;
+  transition: all .3s ease;
+  &:hover {
+    border-bottom: 1px solid $white;
+  }
+  @media (max-width: 700px) {
+    
+  }
 }
+
 .swiper-txt {
   max-width: 400px;
   width: 100%;
@@ -54,19 +74,31 @@
 
 
 .swiper-button {
-  color: #070707;
+  color: $main-color;
   background: url(../img/arrow-slider.svg) no-repeat center center / cover;
+  transition: opacity .3s ease;
   &:after {
     display: none; 
   }
+  &:hover {
+    opacity: 0.6;
+  }
+  
 }
 
 .swiper-button-prev {
   transform: rotate(180deg);
   left: 30px;
+  @media (max-width: 700px) {
+    left: 14px;
+  }
+  
 }
 .swiper-button-next {
   right: 30px;
+  @media (max-width: 700px) {
+    right: 14px;
+  }
 }
 
 

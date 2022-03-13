@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/blog.css">
+    <title>My Blog</title>
+  </head>
+	<body>
+    @@include('partials/_header.html', {
+      "class-myblog": "current-page"
+    })
+    @@include('partials/components/_burger-menu.html', {
+      'location': 'burger-location'
+    })
+    <main class="page">
+      @@include('partials/_section-myblog.html')
+    </main>
+    @@include('partials/_footer.html',{
+      "class-bg": "footer-bg",
+    })
+    
+    @@include('partials/components/_signin.html')
+    @@include('partials/components/_register.html')
+    @@include('partials/components/_sendmsg.html')
+
+    <script src="js/blog.js"></script>
+	</body>
+</html>

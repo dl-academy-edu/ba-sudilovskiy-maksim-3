@@ -53,7 +53,8 @@ const { src, dest } = require('gulp'),
   notify = require('gulp-notify'),
   svgSprite = require('gulp-svg-sprite'),
   webpack = require('webpack-stream'),
-  webpcss = require('gulp-webpcss');
+  webpcss = require('gulp-webpcss'),
+  babel = require('gulp-babel');
 
 
 // Функции выполняемых задач
@@ -117,30 +118,35 @@ function js() {
 				message: "Error: <%= error.message %>"
 			}))
 		)
-    .pipe(webpack({
-      mode:  'development',
-      output: {
-        filename: 'main.js',
-      },
-      module: {
-        rules: [{
-          test: /\.m?js$/,
-          exclude: /node_modules/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: [
-                ['@babel/preset-env', {
-                  targets: "defaults"
-                }]
-              ]
-            }
-          }
-        }]
-      },
-    }))
-    // раскомментировать если нужен не сжатый дубль файла js
-    // .pipe(dest(path.build.js))
+    .pipe(fileinclude())
+    .pipe(dest(path.build.js))
+    .pipe(
+      babel({
+        presets: ['@babel/env'],
+      })
+    )
+    // .pipe(webpack({
+    //   mode:  'development',
+    //   output: {
+    //     filename: 'main.js',
+    //   },
+    //   module: {
+    //     rules: [{
+    //       test: /\.m?js$/,
+    //       exclude: /node_modules/,
+    //       use: {
+    //         loader: 'babel-loader',
+    //         options: {
+    //           presets: [
+    //             ['@babel/preset-env', {
+    //               targets: "defaults"
+    //             }]
+    //           ]
+    //         }
+    //       }
+    //     }]
+    //   },
+    // }))
     .pipe(uglify())
     .pipe(dest(path.build.js))
     .pipe(browsersync.stream())

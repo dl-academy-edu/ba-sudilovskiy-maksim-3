@@ -4,6 +4,7 @@
 @import "mixins";
 @import "fonts";
 @import "common";
+@import "vars";
 
 // подключение стилей slider swiper
 @import "./components/swiper";
@@ -18,5 +19,6 @@
 @import "./components/signin";
 @import "./components/register";
 @import "./components/send-msg";
+@import "./components/burger-menu";
 
 

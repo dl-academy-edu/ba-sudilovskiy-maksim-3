@@ -1,4 +1,4 @@
-export function mySlider() {
+function mySlider() {
   const slides = document.querySelectorAll('.slider__item'),
     sliderWrapper = document.querySelector('.slider__wrapper'),
     sliderField = document.querySelector('.slider__inner'),
@@ -6,18 +6,21 @@ export function mySlider() {
     next = document.querySelector('.slider__btn_next'),
     width = parseInt(getComputedStyle(sliderWrapper).width, 10),
     dotsWrapper = document.querySelector('.slider__bullets');
-
+ 
   let slideIndex = 1,
     offset = 0,
     dots = [];
 
-  sliderField.style.width = width * slides.length + 'px';
+  // sliderField.style.width = width * slides.length + 'px';
+  
 
   function initSlideWidth() {
     let slideWidth = parseInt(getComputedStyle(sliderWrapper).width, 10);
     slides.forEach((slide) => {
       slide.style.width = slideWidth + 'px';
+     
     });
+    sliderField.style.width = parseInt(slides[0].style.width) * slides.length + 'px';
   }
   initSlideWidth();
 
@@ -82,5 +85,8 @@ export function mySlider() {
 
   window.addEventListener('resize', () => {
     initSlideWidth();
+    sliderField.style.transform = `translateX(-${parseInt(slides[0].style.width)}px)`; 
   });
 }
+
+mySlider();

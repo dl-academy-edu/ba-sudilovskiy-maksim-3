@@ -1,49 +1,58 @@
-/* Проверка поддержки webp, добавление класса webp или no-webp для HTML */
-export function isWebp() {
-  // Проверка поддержки webp
-  function testWebP(callback) {
-    let webP = new Image();
-    webP.onload = webP.onerror = function () {
-      callback(webP.height == 2);
-    };
-    webP.src =
-      'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+@@include('./_showModal.js');
+
+
+const api_url = 'https://academy.directlinedev.com/api';
+//Получение данных формы, введёных пользователем в JSON формате
+function getUserFormData(form, type = 'json') {
+
+  switch (type) {
+    case 'json':
+      const inputs = form.querySelectorAll('input');
+      const body = {};
+
+      for (let input of inputs) {
+        body[input.name] = input.value;
+      }
+
+      return JSON.stringify(body);
+      break;
+    case 'formData':
+      const formData = new FormData(form);
+      console.log(formData)
+      return formData;
+      break;
+    default:
+      throw new Error('getUserFormData fn: Incorrect data type')
   }
-  // Добавление класса _webp или _no-webp для HTML
-  testWebP(function (support) {
-    let className = support === true ? 'webp' : 'no-webp';
-    document.documentElement.classList.add(className);
-  });
+  
+}
+
+function sendRequest({ endpoint, method = 'GET', headers = null, body = null }) {
+  const settings = {
+    method,
+    headers,
+    body
+  }
+
+  return fetch( `${api_url}${endpoint}`, settings)
 }
 
 
-/* Открытие popup*/
+//Если пользователь залогинился, то скрываем кнопки 'register', 'sign in' и показываем кнопку 'my profile'.
+function findToken() {
+  const token = localStorage.getItem('token');
+  const btn_signin = document.querySelector('.js-btn-signin');
+  const btn_register = document.querySelector('.js-btn-register');
+  const btn_profile = document.querySelector('.js-btn-profile');
 
-export function openModal() {
-  const signin = document.querySelector('.modal-signin'),
-        register = document.querySelector('.modal-reg'),
-        sendMsg = document.querySelector('.modal-sendmsg');
-    
+  if(!token) return false;
 
-  document.addEventListener('click', (e) => {
-    const target = e.target;
-    target.preventDefault;
-
-    if (target.hasAttribute('data-signin')) {
-      signin.classList.add('modal-view');
-    }
-    if (target.hasAttribute('data-register')) {
-      register.classList.add('modal-view');
-    }
-    if (target.hasAttribute('data-sendMsg')) {
-      sendMsg.classList.add('modal-view');
-    }
-    if (target.hasAttribute('data-close')) {
-      signin.classList.remove('modal-view');
-      register.classList.remove('modal-view');
-      sendMsg.classList.remove('modal-view');
-    }
-  })
-
+  btn_signin.classList.add('hidden');
+  btn_register.classList.add('hidden');
+  btn_profile.classList.remove('hidden');
 }
+findToken();
+
+
+
 
