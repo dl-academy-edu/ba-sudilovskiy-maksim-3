@@ -1,0 +1,19 @@
+// базовые подключения
+@import "vars";
+@import "clear";
+@import "mixins";
+@import "fonts";
+@import "common";
+@import "vars";
+
+
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/section-blog";
+@import "./components/footer";
+@import "./components/burger-menu";
+@import "./components/signin";
+@import "./components/register";
+@import "./components/send-msg";
+@import "./components/preloader";

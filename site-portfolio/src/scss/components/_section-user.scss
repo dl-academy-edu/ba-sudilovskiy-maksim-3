@@ -1,0 +1,134 @@
+.user {
+  padding: 40px 0 60px 0;
+  &__top {
+    display: flex;
+    margin-bottom: 36px;
+    @media (max-width: 700px) {
+      flex-direction: column;
+       margin-bottom: 33px;
+    }
+  }
+
+  &__title {
+    font-size: rem(47);
+    line-height: 1.2;
+    color: $main-color;
+    margin-right: 80px;
+
+    @media (max-width: 1024px) {
+      margin-right: 78px; 
+    }
+  }
+
+  &__txt {
+    max-width: 226px;
+    width: 100%;
+    font-size: rem(18);
+    line-height: 1.2;
+    color: $main-color;
+    font-weight: 500;
+    margin-top: 62px;
+    @media (max-width: 700px) {
+      margin-top: 23px;
+      max-width: 205px;
+      width: 100%;
+    }
+  }
+  @media (max-width: 700px) {
+    padding-top: 30px;
+    padding-bottom: 36px;
+  }
+}
+
+.slider {
+  width: 100%;
+
+  &__wrapper {
+    width: 100%;
+    height: 465px;
+    overflow: hidden;
+    background-color: rgb(192, 195, 194);
+    margin-bottom: 30px;
+    @media (max-width: 1024px) {
+      margin-bottom: 40px;
+    }
+    @media (max-width: 700px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__inner {
+    height: 100%;
+    display: flex;
+    transition: all 0.5s;
+  }
+
+  &__item {
+    height: 100%;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btn {
+    width: 42px;
+    height: 42px;
+    border: 2.5px solid $main-color;
+    border-radius: 21px;
+    font-size: 20px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    &:first-child {
+      transform: rotate(180deg);
+    }
+    &:hover {
+      border: 2.5px solid $dark-grey;
+      fill: $dark-grey;
+    }
+    &:disabled {
+      border: 2.5px solid $light-grey;
+      fill: $light-grey;
+    }
+  }
+
+  &__arrow-svg {
+    width: 20px;
+    height: 23px;
+  }
+
+  &__bullets {
+    display: flex;
+    gap: 0 7px;
+    @media (max-width: 700px) {
+      margin-top: 17px;
+    }
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $light-grey;
+    cursor: pointer;
+    transition: all .3s ease;
+    &_active {
+      background-color: #000;
+    }
+    &:hover {
+      background: $dark-grey;
+    }
+  }
+}

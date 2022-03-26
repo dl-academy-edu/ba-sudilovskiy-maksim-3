@@ -1,0 +1,29 @@
+<div id="sendmsg" aria-hidden="true" class="modal-sendmsg ">
+  <div class="modal-sendmsg__wrapper modal-wrapper">
+    <form class="modal-sendmsg__content modal-content js-message">
+      <div class="modal-sendmsg__inp-wrapper">
+        <label class="modal-sendmsg__label modal-label" >What is your name? <span class="label-star">*</span><input class="modal-sendmsg__input modal-input js-input-name js-input" type="text" name="name"/><span class="message-name"></span></label>
+        
+        <label class="modal-sendmsg__label modal-label">Message subject <span class="label-star">*</span><input class="modal-sendmsg__input modal-input js-input-subject js-input" type="text" name="messageSubject"/><span class="message-subject"></span></label>  
+      </div>
+      <div class="modal-sendmsg__inp-wrapper">
+        <label class="modal-sendmsg__label modal-label">Your Email <span class="label-star">*</span> <input class="modal-sendmsg__input modal-input js-input-email js-input"  name="email"/><span class="message-email"></span></label>
+       
+        <label class="modal-sendmsg__label modal-label">Your mobile phone <span class="label-star">*</span><input class="modal-sendmsg__input modal-input js-input-phone js-input" type="phone" name="phone"/><span class="message-phone"></span></label>
+      </div>
+      
+      <label class="modal-sendmsg__label modal-label" for="discuss">What do you want to discuss with me? </label>
+      <textarea class="modal-sendmsg__textarea js-input" name="" id="discuss" cols="30" rows="10" name="text"></textarea>
+      <span class="message-text"></span>
+      
+      <input class="modal-sendmsg__checkbox" type="checkbox" id="agree-sendmsg" name="agreement"/>
+      <label class="modal-sendmsg__label-agree modal-label" for="agree-sendmsg">Clicking on the button, you consent to the processing of your personal data.</label>
+
+
+      <button type="submit" class="modal-sendmsg__btn modal-btn">Send</button>
+      <button data-close type="button" class="modal-sendmsg__close modal-btn-close"><svg data-close class="">
+       <use data-close href="./img/svg/sprite.svg#close"></use>
+      </svg></button>
+    </form>
+  </div>
+</div>

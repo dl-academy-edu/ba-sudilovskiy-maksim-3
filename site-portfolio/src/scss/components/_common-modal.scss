@@ -1,0 +1,143 @@
+//common styles for modals
+.modal-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow-y: auto;
+  padding: 40px 40px;
+  background: rgba(246, 246, 246, 0.99);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: visible !important;
+  pointer-events: visible !important;
+  z-index: 150;
+
+  @media (max-width: 1024px) {
+    padding: 40px 20px;
+  }
+  @media (max-width: 700px) {
+    padding: 0 0;
+    align-items: flex-start;
+  }
+}
+
+.modal-wrapper {
+  background: $white;
+  border: 2.5px solid $main-color;
+  position: relative;
+  @media (max-width: 700px) {
+    border: none;
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px;
+  @media (max-width: 700px) {
+    padding: 0 20px;
+  }
+}
+
+.modal-label {
+  font-size: rem(14);
+  line-height: 1.2;
+}
+.modal-input {
+  font-size: rem(18);
+  line-height: 1.2;
+  padding: 0 14px;
+  width: 100%;
+  height: 50px;
+  border: 2.5px solid $light-grey;
+  margin-bottom: 20px;
+  margin-top: 6px;
+  &::placeholder {
+    font-size: rem(18);
+    line-height: 1.2;
+  }
+}
+
+.modal-btn {
+  font-weight: 700;
+  font-size: rem(18);
+  line-height: 1.2;
+  height: 42px;
+  padding: 0 19px;
+  border: 2.5px solid $main-color;
+  border-radius: 30px;
+  background: transparent;
+  transition: all 0.3s ease;
+  &:hover {
+    background: $main-color;
+    color: $white;
+  }
+  &:disabled {
+    opacity: 0.2;
+  }
+}
+
+.modal-btn-close {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 0;
+  right: -36px;
+  background-color: transparent;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+  @media (max-width: 1024px) {
+    top: -40px;
+    right: 0;
+  }
+  @media (max-width: 700px) {
+    top: 20px;
+    right: 0;
+    left: 20px;
+  }
+}
+
+.label-star {
+  color: $red;
+}
+
+.modal-show {
+  z-index: 150;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+input[type='checkbox'] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+
+.is-invalid {
+  border: 2.5px solid $red;
+}
+.is-valid {
+  border: 2.5px solid $green;
+}
+.error-msg {
+  font-size: rem(14);
+  line-height: 1.1;
+  color: $red;
+  margin: -10px 0 20px 0;
+}
+.correct-msg {
+  font-size: rem(14);
+  line-height: 1.1;
+  color: $green;
+  margin: -10px 0 20px 0;
+}

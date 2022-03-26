@@ -1,0 +1,71 @@
+@import 'common-modal';
+
+.modal-reg {
+  position: fixed;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal-reg__wrapper {
+  max-width: 680px;
+  width: 100%;
+  @media (max-width: 700px) {
+    max-width: 100%;
+  }
+}
+.modal-reg__inp-wrapper {
+  width: 100%;
+
+  &:not(:first-child) {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.modal-reg__label {
+  width: 48%;
+  @media (max-width: 700px) {
+    width: 100%;
+  }
+}
+
+.modal-reg__label-agree {
+  margin-left: 30px;
+  position: relative;
+  cursor: pointer;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%);
+    width: 19px;
+    height: 19px;
+    border: 2px solid $main-color;
+    border-radius: 3px;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url(../img/check.svg) top right no-repeat;
+    opacity: 0;
+  }
+}
+
+.modal-reg__checkbox:checked + .modal-reg__label-agree:after {
+    opacity: 1;
+}  
+
+.modal-reg__btn {
+  margin-top: 30px;
+}
+

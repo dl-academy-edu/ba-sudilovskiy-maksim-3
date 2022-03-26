@@ -1,0 +1,31 @@
+<div id="editdata" aria-hidden="true" class="modal-editdata">
+  <div class="modal-editdata__wrapper modal-wrapper">
+    <form class="modal-editdata__content modal-content" name="editUserData">
+      <div class="modal-editdata__inp-wrapper">
+        <label class="modal-editdata__label modal-label">Email<input class="modal-editdata__input modal-input" name="email"/></label>
+      </div>
+      <div class="modal-editdata__inp-wrapper">
+        <label class="modal-editdata__label modal-label" >Name<input class="modal-editdata__input modal-input" name="name"/></label>
+        
+        <label class="modal-editdata__label modal-label">Surname<input class="modal-editdata__input modal-input" name="surname"/></label>  
+      </div>
+      <div class="modal-editdata__inp-wrapper">
+        <label class="modal-editdata__label modal-label">Location <input class="modal-editdata__input modal-input" name="location"/></label>
+       
+        <label class="modal-editdata__label modal-label">Age<input class="modal-editdata__input modal-input" type="number"  name="age"/></label>
+      </div>
+       <div class="modal-editdata__inp-wrapper">
+        <label class="modal-editdata__label modal-label">Profile picture 
+          <input class="modal-editdata__input modal-input" type="file"/ name="avatar">
+          <input class="modal-editdata__input modal-input" type="text" placeholder="Select file"/>
+        </label>
+      </div>
+      
+    
+      <button type="submit" class="modal-editdata__btn modal-btn">Submit changes</button>
+      <button data-close type="button" class="modal-editdata__close modal-btn-close"><svg data-close class="">
+       <use data-close href="./img/svg/sprite.svg#close"></use>
+      </svg></button>
+    </form>
+  </div>
+</div>

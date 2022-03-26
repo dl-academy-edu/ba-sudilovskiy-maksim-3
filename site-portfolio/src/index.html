@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <title>Main</title>
+  </head>
+	<body>
+    @@include('partials/_header.html')
+    @@include('partials/components/_burger-menu.html')
+    <main class="page">
+      @@include('partials/_section-user.html')
+      @@include('partials/_section-about.html')
+      @@include('partials/_section-skills.html')
+      @@include('partials/_section-portfolio.html')
+    </main>
+    @@include('partials/_footer.html')
+
+    @@include('partials/components/_signin.html')
+    @@include('partials/components/_register.html')
+    @@include('partials/components/_sendmsg.html')
+   
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    
+
+	</body>
+</html>
